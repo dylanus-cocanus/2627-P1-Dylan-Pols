@@ -4,24 +4,25 @@ function setup() {
 
 function draw() {
   background(150)
-fill("blue")
-rect(0,0,300,200)
-fill("red")
-rect(0,200,300,300)
-fill("white")
-rect(0,450,400,350)
-fill("black")
-rect(300,0,400,250)
-fill("yellow")
-rect(700,0,100,300)
-fill("red")
-rect(400,600,300,200)
-fill("white")
-rect(500,500,150,300)
-fill("red")
-rect(425,300,400,200)
-//fill("green")
-//rect(,,,)
+  fill("black")
+  text("Dylanus", 100,50)
+
+  fill("grey");
+  rect(100, 100, 100, 200)
+  fill("red");
+  circle(150,130,50);
+  fill("orange")
+  circle(150,200,50);
+  fill("green")
+  circle(150,270,50);
+  
+  fill("orange")
+  rect(500,200,200,50)
+  fill("white")
+  rect(500,250,200,50)
+  fill("blue")
+  rect(500,300,200,50)
+
 
 
 }
