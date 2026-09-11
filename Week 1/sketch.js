@@ -4,9 +4,12 @@ function setup() {
 
 function draw() {
   background(150)
+  textSize(20)
+  //naam
   fill("black")
-  text("Dylan Pols", 100,50)
+  text("1. Dylan Pols", 550,50)
 
+  text("5. stoplicht",70,70)
   fill("grey");
   rect(100, 100, 100, 200)
   fill("red");
@@ -16,6 +19,8 @@ function draw() {
   fill("green")
   circle(150,270,50);
   
+  fill("black")
+  text("2. flag",450,150)
   fill("orange")
   rect(500,200,200,50)
   fill("white")
@@ -23,6 +28,8 @@ function draw() {
   fill("blue")
   rect(500,300,200,50)
 
+fill("black")
+  text("8. Yoshi",520,700)
   strokeWeight(0)
 fill("red");
 rect(675,600,50,25);
@@ -44,7 +51,7 @@ rect(550,875,25,50);
 rect(575,900,125,50);
 rect(625,950,75,25);
 
-
+//nek
 fill("white")
 rect(675,650,25,50);
 square(700,625,25);
@@ -60,10 +67,13 @@ rect(575,950,50,25);
 rect(700,900,50,25);
 rect(675,925,50,25);
 
+
+//ogen
 fill("black");
 rect(700,650,25,50);
 rect(800,675,25,25);
 
+//zadel
 fill("red")
 rect(575,850,50,25);
 
@@ -76,8 +86,8 @@ rect(575,725,25,50);
 rect(600,775,25,50);
 rect(625,800,25,50);
 
-
-
+fill("black")
+text("3. schaakbord",150,950)
 fill("white")
 strokeWeight(20)
 rect(250,1000,150,150)
@@ -93,11 +103,13 @@ rect (350,1100,50,50)
 rect (350,1000,50,50)
 rect (300,1050,50,50)
 
-text("4.huis",80,680)
+text("4.huis",80,550)
 fill("white")
 rect(100,700,240,200)
 triangle(80,700,220,580,360,700)
 
+fill("black")
+text("7. Mario",880,80)
 noFill()
 strokeWeight(4)
 rect(900,100,800,800)
@@ -480,6 +492,8 @@ rect(1650,750,50,50)
 rect(1650,800,50,50)
 rect(1650,850,50,50)
 
+fill("black")
+text("6. dobbelsteen",390,410)
 strokeWeight(7)
 fill("white")
 square(400,450,200,50)
