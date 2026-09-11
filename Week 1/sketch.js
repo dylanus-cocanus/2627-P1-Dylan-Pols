@@ -5,7 +5,7 @@ function setup() {
 function draw() {
   background(150)
   fill("black")
-  text("Dylanus", 100,50)
+  text("Dylan Pols", 100,50)
 
   fill("grey");
   rect(100, 100, 100, 200)
@@ -23,6 +23,7 @@ function draw() {
   fill("blue")
   rect(500,300,200,50)
 
+  strokeWeight(0)
 fill("red");
 rect(675,600,50,25);
 rect(650,625,50,25);
@@ -477,7 +478,13 @@ rect(1650,750,50,50)
 rect(1650,800,50,50)
 rect(1650,850,50,50)
 
+strokeWeight(7)
 fill("white")
 square(400,450,200,50)
-square(450,500,0)
+fill("black")
+square(470,525,60,100)
+square(420,470,50,100)
+square(420,580,50,100)
+square(530,580,50,100)
+square(530,470,50,100)
 }
