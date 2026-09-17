@@ -4,7 +4,7 @@ let positieWolk = 250
 let positieWereld = 0
 let postitieBerg = 0
 function setup() {
-  createCanvas(4000, 1500);
+  createCanvas(2000, 1500);
 }
 
 function draw() {
