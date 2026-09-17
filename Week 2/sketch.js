@@ -1,18 +1,15 @@
 function setup() {
   createCanvas(4000, 1500);
-
-  describe("A gray square. The mouse's x- and y-coordinates are displayed as the user moves the mouse.");
 }
 
 function draw() {
   background(200);
-let Bruin = fill(101,67,33)
 
   background(120,150,200);
   fill("yellow")
-  ellipse(150, 100, 150, 150)
+  circle(150, 100, 150  )
   fill("white")
-  ellipse(3900, 100, 120, 120)
+  circle(3900, 100, 120)
   strokeWeight(0)
   fill(75)
   triangle(-220, 1000,460,10, 1500, 1000)
@@ -41,17 +38,17 @@ let Bruin = fill(101,67,33)
   rect(3100,1130,300,50)
   rect(3500,1130,300,50)
   rect(3900,1130,300,50)
-  Bruin
+  fill(101,67,33)
   rect(350,950,100,-300)
+  rect(830,950,100,-300)
   fill("green")
-  ellipse(400,615,350,350)
+  circle(400,615,350)
+  circle(875,570,350)
 
 
-  fill(1)
-    // Style the text.
-  textAlign(CENTER);
-  textSize(30);
+    fill(1)
+    textAlign(CENTER);
+  textSize(50);
 
-  // Display the mouse's coordinates.
   text(`x: ${int(mouseX)} y: ${int(mouseY)}`, 2000, 50);
 }
