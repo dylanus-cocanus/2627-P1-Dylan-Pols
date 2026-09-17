@@ -72,14 +72,14 @@ if(positieWereld >=6001 && positieWereld <= 8000){
   rect(positieWereld + 830,950,100,-300)
 
 fill(70)
-rect(3080,945,50,-400)
-rect(3025,680,150,-400)
+rect(positieWereld + 3080,945,50,-400)
+rect(positieWereld + 3025,680,150,-400)
 fill("red")
-circle(3100,365,100)
+circle(positieWereld + 3100,365,100)
 fill("yellow")
-circle(3100,490,100)
+circle(positieWereld + 3100,490,100)
   fill("green")
-  circle(3100,615,100)
+  circle(positieWereld + 3100,615,100)
   circle(positieWereld + 400,615,350)
   circle(positieWereld + 875,570,350)
 
@@ -138,13 +138,13 @@ fill("white")
     positieWolk = 4200
   }
 
- if(mouseX >= 1400){
+ if(mouseX >= 1500){
   positieWereld = positieWereld - 3
  }
  else if(mouseX <= 300){
   positieWereld = positieWereld + 3
  }
-if(mouseX >= 1400){
+if(mouseX >= 1500){
   postitieBerg = postitieBerg - 2
  }
  else if(mouseX <= 300){
