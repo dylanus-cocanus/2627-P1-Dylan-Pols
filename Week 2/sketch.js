@@ -4,7 +4,7 @@ let positieWolk = 250
 let positieWereld = 0
 let postitieBerg = 0
 function setup() {
-  createCanvas(2000, 1500);
+  createCanvas(4000, 1500);
 }
 
 function draw() {
@@ -28,11 +28,18 @@ if(positieWereld >=6001 && positieWereld <= 8000){
  
  
  
-  fill("yellow")
-  circle(positieWereld + 150, 100, 150  )
+  let myGradient = drawingContext.createRadialGradient(50, 50, 3, 50, 50, 40);
+  myGradient.addColorStop(0, 'yellow');
+  myGradient.addColorStop(0.6, 'orangered');
+  myGradient.addColorStop(1, 'yellow');
+  drawingContext.fillStyle = myGradient;
+  drawingContext.strokeStyle = 'rgba(0, 0, 0, 0)';
+
+  // Draw the circle.
+  circle(positieWereld +150, 100, 150);
   fill("white")
   circle(positieWereld + 3900, 100, 120)
-  strokeWeight(0)
+  strokeWeight(1)
   fill(75)
   triangle(postitieBerg + -220,1000,postitieBerg + 460,10,postitieBerg + 1500, 1000)
   triangle(postitieBerg + 1500,1250,postitieBerg + 2680,250,postitieBerg + 3420,1230)
@@ -64,27 +71,35 @@ if(positieWereld >=6001 && positieWereld <= 8000){
   rect(positieWereld + 350,950,100,-300)
   rect(positieWereld + 830,950,100,-300)
 
+fill(70)
+rect(3080,945,50,-400)
+rect(3025,680,150,-400)
+fill("red")
+circle(3100,365,100)
+fill("yellow")
+circle(3100,490,100)
   fill("green")
+  circle(3100,615,100)
   circle(positieWereld + 400,615,350)
   circle(positieWereld + 875,570,350)
 
   fill("yellow")
-  triangle(posistieAuto2 + 1650,1150,2050,1060,2050,1250)
+  triangle(positieWereld + posistieAuto2 + 1650,1150,positieWereld + posistieAuto2 + 2050,1060,positieWereld + posistieAuto2 + 2050,1250)
   fill("blue")
-  rect(posistieAuto2 + 1350,1100,400,100)
-  rect(posistieAuto2 + 1350,1050,300,50)
+  rect(positieWereld + posistieAuto2 + 1350,1100,400,100)
+  rect(positieWereld + posistieAuto2 + 1350,1050,300,50)
   fill("white")
-  rect(posistieAuto2 + 1650,1050,100,50)
+  rect(positieWereld + posistieAuto2 + 1650,1050,100,50)
   fill("black")
-  circle(posistieAuto2 + 1685,1200,100)
-  circle(posistieAuto2 + 1405,1200,100)
+  circle(positieWereld + posistieAuto2 + 1685,1200,100)
+  circle(positieWereld + posistieAuto2 + 1405,1200,100)
   fill("white")
-  circle(posistieAuto2 + 1685,1200,50)
-  circle(posistieAuto2 + 1405,1200,50)
+  circle(positieWereld + posistieAuto2 + 1685,1200,50)
+  circle(positieWereld + posistieAuto2 + 1405,1200,50)
 
 
    fill("yellow")
-  triangle(positieWereld + posistieAuto + 300,1150,positieWereld + posistieAuto + 700,1060,positieWereld + posistieAuto + 700,1250)
+  triangle(positieWereld + posistieAuto1 + 300,1150,positieWereld + posistieAuto1 + 700,1060,positieWereld + posistieAuto1 + 700,1250)
   fill("red")
   rect(positieWereld + posistieAuto1,1100,400,100)
   rect(positieWereld + posistieAuto1,1050,300,50)
@@ -100,8 +115,18 @@ if(positieWereld >=6001 && positieWereld <= 8000){
   if(posistieAuto1 >= 4300){
     posistieAuto1 = -400
   }
+  posistieAuto2 = posistieAuto2 + 15
+  if(posistieAuto2 >= 4300){
+    posistieAuto2 = -400
+  }
 
-  text(posistieAuto,900,50)
+fill(101,67,33)
+  rect(positieWereld + 800,1415,100,-300)
+  fill("green")
+  circle(positieWereld + 850,1000,350)
+
+fill("white")
+  text(posistieAuto1,900,50)
 
   circle(positieWereld + positieWolk,250,200)
   circle(positieWereld + positieWolk + 165,260,200)
