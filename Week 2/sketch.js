@@ -1,5 +1,5 @@
-let posistieAuto1 = 100
-let posistieAuto2 = 0
+let posistieAuto1 = -500
+let posistieAuto2 = -200
 let positieWolk = 250
 let positieWereld = 0
 let postitieBerg = 0
@@ -84,40 +84,40 @@ circle(positieWereld + 3100,490,100)
   circle(positieWereld + 875,570,350)
 
   fill("yellow")
-  triangle(positieWereld + posistieAuto2 + 1650,1150,positieWereld + posistieAuto2 + 2050,1060,positieWereld + posistieAuto2 + 2050,1250)
+  triangle(posistieAuto2 + 1650,950,posistieAuto2 + 2050,860,posistieAuto2 + 2050,1050)
   fill("blue")
-  rect(positieWereld + posistieAuto2 + 1350,1100,400,100)
-  rect(positieWereld + posistieAuto2 + 1350,1050,300,50)
+  rect(posistieAuto2 + 1350,900,400,100)
+  rect(posistieAuto2 + 1350,850,300,50)
   fill("white")
-  rect(positieWereld + posistieAuto2 + 1650,1050,100,50)
+  rect(posistieAuto2 + 1650,850,100,50)
   fill("black")
-  circle(positieWereld + posistieAuto2 + 1685,1200,100)
-  circle(positieWereld + posistieAuto2 + 1405,1200,100)
+  circle(posistieAuto2 + 1685,1000,100)
+  circle(posistieAuto2 + 1405,1000,100)
   fill("white")
-  circle(positieWereld + posistieAuto2 + 1685,1200,50)
-  circle(positieWereld + posistieAuto2 + 1405,1200,50)
+  circle(posistieAuto2 + 1685,1000,50)
+  circle(posistieAuto2 + 1405,1000,50)
 
 
    fill("yellow")
-  triangle(positieWereld + posistieAuto1 + 300,1150,positieWereld + posistieAuto1 + 700,1060,positieWereld + posistieAuto1 + 700,1250)
+  triangle(posistieAuto1 + 300,1150,posistieAuto1 + 700,1060,posistieAuto1 + 700,1250)
   fill("red")
-  rect(positieWereld + posistieAuto1,1100,400,100)
-  rect(positieWereld + posistieAuto1,1050,300,50)
+  rect(posistieAuto1,1100,400,100)
+  rect(posistieAuto1,1050,300,50)
   fill("white")
-  rect(positieWereld + posistieAuto1 + 300,1050,100,50)
+  rect(posistieAuto1 + 300,1050,100,50)
   fill("black")
-  circle(positieWereld + posistieAuto1 + 335,1200,100)
-  circle(positieWereld + posistieAuto1 + 55,1200,100)
+  circle(posistieAuto1 + 335,1200,100)
+  circle(posistieAuto1 + 55,1200,100)
   fill("white")
-  circle(positieWereld + posistieAuto1 + 335,1200,50)
-  circle(positieWereld + posistieAuto1 + 55,1200,50)
-  posistieAuto1 = posistieAuto1 + 15
+  circle(posistieAuto1 + 335,1200,50)
+  circle(posistieAuto1 + 55,1200,50)
+  posistieAuto1 = posistieAuto1 + 20
   if(posistieAuto1 >= 4300){
-    posistieAuto1 = -400
+    posistieAuto1 = -600
   }
-  posistieAuto2 = posistieAuto2 + 15
+  posistieAuto2 = posistieAuto2 + 30
   if(posistieAuto2 >= 4300){
-    posistieAuto2 = -400
+    posistieAuto2 = -2000
   }
 
 fill(101,67,33)
@@ -139,16 +139,16 @@ fill("white")
   }
 
  if(mouseX >= 1500){
-  positieWereld = positieWereld - 3
+  positieWereld = positieWereld - 5
  }
  else if(mouseX <= 300){
-  positieWereld = positieWereld + 3
- }
+  positieWereld = positieWereld + 5
+  }
 if(mouseX >= 1500){
-  postitieBerg = postitieBerg - 2
+  postitieBerg = postitieBerg - 4,5
  }
  else if(mouseX <= 300){
-  postitieBerg = postitieBerg + 2,5
+  postitieBerg = postitieBerg + 4,5
  }
 
   text(positieWereld,900,100)
