@@ -4,7 +4,7 @@ let positieWolk = 250
 let positieWereld = 0
 let postitieBerg = 0
 function setup() {
-  createCanvas(2000, 1500);
+  createCanvas(4000, 1500);
 }
 
 function draw() {
@@ -138,18 +138,18 @@ fill("white")
     positieWolk = 4200
   }
 
- if(mouseX >= 1500){
-  positieWereld = positieWereld - 5
- }
- else if(mouseX <= 300){
-  positieWereld = positieWereld + 5
-  }
-if(mouseX >= 1500){
-  postitieBerg = postitieBerg - 4,5
- }
- else if(mouseX <= 300){
-  postitieBerg = postitieBerg + 4,5
- }
+//  if(mouseX >= 1500){
+//   positieWereld = positieWereld - 5
+//  }
+//  else if(mouseX <= 300){
+//   positieWereld = positieWereld + 5
+//   }
+// if(mouseX >= 1500){
+//   postitieBerg = postitieBerg - 4,5
+//  }
+//  else if(mouseX <= 300){
+//   postitieBerg = postitieBerg + 4,5
+//  }
 
   text(positieWereld,900,100)
 
