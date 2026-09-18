@@ -1,5 +1,6 @@
 let posistieAuto1 = -500
 let posistieAuto2 = -200
+let hypercar = 0
 let positieWolk = 250
 let positieWereld = 0
 let postitieBerg = 0
@@ -20,14 +21,7 @@ if(positieWereld >=6001 && positieWereld <= 8000){
 }
   rect(positieWereld + 0,0,4000,1500)
  
- 
- 
- 
- 
- 
- 
- 
- 
+
   let myGradient = drawingContext.createRadialGradient(50, 50, 3, 50, 50, 40);
   myGradient.addColorStop(0, 'yellow');
   myGradient.addColorStop(0.6, 'orangered');
@@ -84,18 +78,18 @@ circle(positieWereld + 3100,490,100)
   circle(positieWereld + 875,570,350)
 
   fill("yellow")
-  triangle(posistieAuto2 + 1650,950,posistieAuto2 + 2050,860,posistieAuto2 + 2050,1050)
+  triangle(posistieAuto2 + 1650,1150,posistieAuto2 + 2050,1060,posistieAuto2 + 2050,1250)
   fill("blue")
-  rect(posistieAuto2 + 1350,900,400,100)
-  rect(posistieAuto2 + 1350,850,300,50)
+  rect(posistieAuto2 + 1350,1100,400,100)
+  rect(posistieAuto2 + 1350,1050,300,50)
   fill("white")
-  rect(posistieAuto2 + 1650,850,100,50)
+  rect(posistieAuto2 + 1650,1050,100,50)
   fill("black")
-  circle(posistieAuto2 + 1685,1000,100)
-  circle(posistieAuto2 + 1405,1000,100)
+  circle(posistieAuto2 + 1685,1200,100)
+  circle(posistieAuto2 + 1405,1200,100)
   fill("white")
-  circle(posistieAuto2 + 1685,1000,50)
-  circle(posistieAuto2 + 1405,1000,50)
+  circle(posistieAuto2 + 1685,1200,50)
+  circle(posistieAuto2 + 1405,1200,50)
 
 
    fill("yellow")
@@ -115,7 +109,7 @@ circle(positieWereld + 3100,490,100)
   if(posistieAuto1 >= 4300){
     posistieAuto1 = -600
   }
-  posistieAuto2 = posistieAuto2 + 30
+  posistieAuto2 = posistieAuto2 + 21
   if(posistieAuto2 >= 4300){
     posistieAuto2 = -2000
   }
