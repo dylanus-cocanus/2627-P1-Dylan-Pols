@@ -1,6 +1,5 @@
 let posistieAuto1 = -500
 let posistieAuto2 = -200
-let hypercar = 0
 let positieWolk = 250
 let positieWereld = 0
 let postitieBerg = 0
