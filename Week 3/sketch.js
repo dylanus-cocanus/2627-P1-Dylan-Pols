@@ -1,3 +1,4 @@
+player = 1
 let vakje1 = "white"
 let vakje2 = "white"
 let vakje3 = "white"
@@ -11,6 +12,8 @@ let vakje9 = "white"
 let celgrote = 100
 let celbuffer = 50
 let celstart = 200
+
+
 
 function setup() {
   createCanvas(800, 800);
