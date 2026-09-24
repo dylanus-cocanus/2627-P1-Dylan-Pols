@@ -167,7 +167,7 @@ function mousePressed() {
   if(player >= 3) {
     player = 1
   }
-  if(player == 1) {
+  if(kleurvlakje = "white" && player == 1) {
     kleurvlakje = "red"
   }
   else{
