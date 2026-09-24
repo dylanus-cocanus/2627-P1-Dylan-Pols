@@ -29,6 +29,7 @@ function draw() {
   text("speler" + player, 330, 100)
   let vakjex = celstart;
   let vakjey = celstart;
+
   if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
     binnenvakje = 1
     if(er_word_geklikt == 1 ){
@@ -40,6 +41,7 @@ function draw() {
     strokeWeight(1)
   }
   fill(vakje1)
+
   rect(vakjex,vakjey,celgrote,celgrote)
   vakjex += celgrote + celbuffer
   if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
@@ -53,6 +55,7 @@ function draw() {
     strokeWeight(1)
   }
   fill(vakje2)
+
    rect(vakjex,vakjey,celgrote,celgrote)
     vakjex += celgrote + celbuffer
   if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
@@ -66,6 +69,7 @@ function draw() {
     strokeWeight(1)
   }
   fill(vakje3)
+
    rect(vakjex,vakjey,celgrote,celgrote)
   vakjex = celstart
   vakjey += celgrote + celbuffer
@@ -80,6 +84,7 @@ function draw() {
     strokeWeight(1)
   }
   fill(vakje4)
+
     rect(vakjex,vakjey,celgrote,celgrote)
   vakjex += celgrote + celbuffer
   if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
@@ -93,6 +98,7 @@ function draw() {
     strokeWeight(1)
   }
   fill(vakje5)
+
    rect(vakjex,vakjey,celgrote,celgrote)
     vakjex += celgrote + celbuffer
   if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
@@ -106,6 +112,7 @@ function draw() {
     strokeWeight(1)
   }
   fill(vakje6)
+
    rect(vakjex,vakjey,celgrote,celgrote)
      vakjex = celstart
   vakjey += celgrote + celbuffer
@@ -120,10 +127,11 @@ function draw() {
     strokeWeight(1)
   }
   fill(vakje7)
+
     rect(vakjex,vakjey,celgrote,celgrote)
   vakjex += celgrote + celbuffer
   if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     binnenvakje = 1
+     binnenvakje + 1
        if(er_word_geklikt == 1 ){
       vakje8 = kleurvlakje
       er_word_geklikt = 0
@@ -133,6 +141,7 @@ function draw() {
     strokeWeight(1)
   }
   fill(vakje8)
+
    rect(vakjex,vakjey,celgrote,celgrote)
     vakjex += celgrote + celbuffer
   if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
@@ -151,9 +160,10 @@ function draw() {
 
 function mousePressed() {
   er_word_geklikt = 1
-  if(binnenvakje == 1){
+  if(binnenvakje >= 1){
   player += 1
-  }
+  binnenvakje = 0
+ }
   if(player >= 3) {
     player = 1
   }
