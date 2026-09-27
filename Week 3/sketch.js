@@ -9,7 +9,7 @@ let box6 = "white"
 let box7 = "white"
 let box8 = "white"
 let box9 = "white"
-let boxes = [0,0,0,0,0,0,0,0,0]
+//let boxes = [0,0,0,0,0,0,0,0,0]
 
 let pressed = 0
 let boxPressed = 0
@@ -32,30 +32,27 @@ function draw() {
   let box_Y = boxLocation;
   
 
-      if (boxes[0] == 0) {
-      fill("white")
-    }
-    else if(boxes[0] == 1) {
-      fill("red")
-    }
-    else{
-      fill("blue")
-    }
+    //   if (boxes[0] == 0) {
+    //   fill("white")
+    // }
+    // else if(boxes[0] == 1) {
+    //   fill("red")
+    // }
+    // else{
+    //   fill("blue")
+    // }
     
     if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
-
-
-
-      // boxPressed = 1
-      // if(pressed == 1 ){
-      //   box1 = boxColour
-      //   pressed = 0
-      // }
+       boxPressed = 1
+       if(pressed == 1 ){
+         box1 = boxColour
+         pressed = 0
+       }
       strokeWeight(4)
     } else {
       strokeWeight(1)
     }
-   // fill(box1)
+   fill(box1)
 rect(box_X,box_Y,boxSize,boxSize)
 
   box_X += boxSize + boxBuffer
@@ -174,11 +171,9 @@ rect(box_X,box_Y,boxSize,boxSize)
 }
 
 function mousePressed() {
-  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
-    boxes[0] +1
-  }
-  
-  
+  // if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+  //   boxes[0] +1
+  // } 
   pressed = 1
   if(boxPressed >= 1){
   player += 1
