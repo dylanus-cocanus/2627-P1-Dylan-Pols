@@ -1,20 +1,21 @@
 let player = 1
-let kleurvlakje = "white"
-let vakje1 = "white"
-let vakje2 = "white"
-let vakje3 = "white"
-let vakje4 = "white"
-let vakje5 = "white"
-let vakje6 = "white"
-let vakje7 = "white"
-let vakje8 = "white"
-let vakje9 = "white"
+let boxColour = "white"
+let box1 = "white"
+let box2 = "white"
+let boxe3 = "white"
+let box4 = "white"
+let box5 = "white"
+let box6 = "white"
+let box7 = "white"
+let box8 = "white"
+let box9 = "white"
+let boxes = [0,0,0,0,0,0,0,0,0]
 
-let er_word_geklikt = 0
-let gekliktvakje = 0
-let celgrote = 100
-let celbuffer = 50
-let celstart = 200
+let pressed = 0
+let boxPressed = 0
+let boxSize = 100
+let boxBuffer = 50
+let boxLocation = 200
 
 
 
@@ -25,152 +26,171 @@ function setup() {
 function draw() {
   background(20);
   textSize(40)
-  fill(kleurvlakje)
+  fill(boxColour)
   text("speler" + player, 330, 100)
-  let vakjex = celstart;
-  let vakjey = celstart;
+  let box_X = boxLocation;
+  let box_Y = boxLocation;
   
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-    gekliktvakje = 1
-    if(er_word_geklikt == 1 ){
-      vakje1 = kleurvlakje
-      er_word_geklikt = 0
-    }
-    strokeWeight(4)
-  } else {
-    strokeWeight(1)
-  }
-  fill(vakje1)
 
-  rect(vakjex,vakjey,celgrote,celgrote)
-  vakjex += celgrote + celbuffer
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     gekliktvakje = 1
-       if(er_word_geklikt == 1 ){
-      vakje2 = kleurvlakje
-      er_word_geklikt = 0
+      if (boxes[0] == 0) {
+      fill("white")
     }
-    strokeWeight(4)
-  } else {
-    strokeWeight(1)
-  }
-  fill(vakje2)
+    else if(boxes[0] == 1) {
+      fill("red")
+    }
+    else{
+      fill("blue")
+    }
+    
+    if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
 
-   rect(vakjex,vakjey,celgrote,celgrote)
-    vakjex += celgrote + celbuffer
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     gekliktvakje = 1
-    if(er_word_geklikt == 1 ){
-      vakje3 = kleurvlakje
-      er_word_geklikt = 0
-    }
-    strokeWeight(4)
-  } else {
-    strokeWeight(1)
-  }
-  fill(vakje3)
 
-   rect(vakjex,vakjey,celgrote,celgrote)
-  vakjex = celstart
-  vakjey += celgrote + celbuffer
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     gekliktvakje = 1
-        if(er_word_geklikt == 1 ){
-      vakje4 = kleurvlakje
-      er_word_geklikt = 0
-    }
-    strokeWeight(4)
-  } else {
-    strokeWeight(1)
-  }
-  fill(vakje4)
 
-    rect(vakjex,vakjey,celgrote,celgrote)
-  vakjex += celgrote + celbuffer
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     gekliktvakje = 1
-       if(er_word_geklikt == 1 ){
-      vakje5 = kleurvlakje
-      er_word_geklikt = 0
+      // boxPressed = 1
+      // if(pressed == 1 ){
+      //   box1 = boxColour
+      //   pressed = 0
+      // }
+      strokeWeight(4)
+    } else {
+      strokeWeight(1)
     }
-    strokeWeight(4)
-  } else {
-    strokeWeight(1)
-  }
-  fill(vakje5)
+   // fill(box1)
+rect(box_X,box_Y,boxSize,boxSize)
 
-   rect(vakjex,vakjey,celgrote,celgrote)
-    vakjex += celgrote + celbuffer
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     gekliktvakje = 1
-       if(er_word_geklikt == 1 ){
-      vakje6 = kleurvlakje
-      er_word_geklikt = 0
+  box_X += boxSize + boxBuffer
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+     boxPressed = 1
+       if(pressed == 1 ){
+      box2 = boxColour
+      pressed = 0
     }
     strokeWeight(4)
   } else {
     strokeWeight(1)
   }
-  fill(vakje6)
+  fill(box2)
 
-   rect(vakjex,vakjey,celgrote,celgrote)
-     vakjex = celstart
-  vakjey += celgrote + celbuffer
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     gekliktvakje = 1
-        if(er_word_geklikt == 1 ){
-      vakje7 = kleurvlakje
-      er_word_geklikt = 0
+   rect(box_X,box_Y,boxSize,boxSize)
+    box_X += boxSize + boxBuffer
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+     boxPressed = 1
+    if(pressed == 1 ){
+      boxe3 = boxColour
+      pressed = 0
     }
     strokeWeight(4)
   } else {
     strokeWeight(1)
   }
-  fill(vakje7)
+  fill(boxe3)
 
-    rect(vakjex,vakjey,celgrote,celgrote)
-  vakjex += celgrote + celbuffer
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     gekliktvakje + 1
-       if(er_word_geklikt == 1 ){
-      vakje8 = kleurvlakje
-      er_word_geklikt = 0
+   rect(box_X,box_Y,boxSize,boxSize)
+  box_X = boxLocation
+  box_Y += boxSize + boxBuffer
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+     boxPressed = 1
+        if(pressed == 1 ){
+      box4 = boxColour
+      pressed = 0
     }
     strokeWeight(4)
   } else {
     strokeWeight(1)
   }
-  fill(vakje8)
+  fill(box4)
 
-   rect(vakjex,vakjey,celgrote,celgrote)
-    vakjex += celgrote + celbuffer
-  if(mouseX >= vakjex && mouseX <= vakjex + celgrote && mouseY >= vakjey && mouseY <= vakjey + celgrote) {
-     gekliktvakje = 1
-        if(er_word_geklikt == 1 ){
-      vakje9 = kleurvlakje
-      er_word_geklikt = 0
+    rect(box_X,box_Y,boxSize,boxSize)
+  box_X += boxSize + boxBuffer
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+     boxPressed = 1
+       if(pressed == 1 ){
+      box5 = boxColour
+      pressed = 0
     }
     strokeWeight(4)
   } else {
     strokeWeight(1)
   }
-  fill(vakje9)
-   rect(vakjex,vakjey,celgrote,celgrote)
+  fill(box5)
+
+   rect(box_X,box_Y,boxSize,boxSize)
+    box_X += boxSize + boxBuffer
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+     boxPressed = 1
+       if(pressed == 1 ){
+      box6 = boxColour
+      pressed = 0
+    }
+    strokeWeight(4)
+  } else {
+    strokeWeight(1)
+  }
+  fill(box6)
+
+   rect(box_X,box_Y,boxSize,boxSize)
+     box_X = boxLocation
+  box_Y += boxSize + boxBuffer
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+     boxPressed = 1
+        if(pressed == 1 ){
+      box7 = boxColour
+      pressed = 0
+    }
+    strokeWeight(4)
+  } else {
+    strokeWeight(1)
+  }
+  fill(box7)
+
+    rect(box_X,box_Y,boxSize,boxSize)
+  box_X += boxSize + boxBuffer
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+     boxPressed = 1
+       if(pressed == 1 ){
+      box8 = boxColour
+      pressed = 0
+    }
+    strokeWeight(4)
+  } else {
+    strokeWeight(1)
+  }
+  fill(box8)
+
+   rect(box_X,box_Y,boxSize,boxSize)
+    box_X += boxSize + boxBuffer
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+     boxPressed = 1
+        if(pressed == 1 ){
+      box9 = boxColour
+      pressed = 0
+    }
+    strokeWeight(4)
+  } else {
+    strokeWeight(1)
+  }
+  fill(box9)
+   rect(box_X,box_Y,boxSize,boxSize)
 }
 
 function mousePressed() {
-  er_word_geklikt = 1
-  if(gekliktvakje >= 1){
+  if(mouseX >= box_X && mouseX <= box_X + boxSize && mouseY >= box_Y && mouseY <= box_Y + boxSize) {
+    boxes[0] +1
+  }
+  
+  
+  pressed = 1
+  if(boxPressed >= 1){
   player += 1
-  gekliktvakje = 0
+  boxPressed = 0
  }
   if(player >= 3) {
     player = 1
   }
   if(player == 1) {
-    kleurvlakje = "red"
+    boxColour = "red"
   }
   else{
-    kleurvlakje = "blue"
+    boxColour = "blue"
   }
 }
