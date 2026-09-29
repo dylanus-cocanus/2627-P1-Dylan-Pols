@@ -10,7 +10,12 @@ function setup() {
 
 function draw() {
   background(220);
-text(1.,20,15)
+text("1.",20,15)
+fill(colours[0])
+text(colours[0], 35,15)
+
+
+
 text(2.,20,100)
 text(3.,20,190)
 text(4.,20,250)
