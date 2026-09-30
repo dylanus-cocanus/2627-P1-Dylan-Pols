@@ -3,7 +3,7 @@ function setup() {
 }
 
 function draw() {
-  background(70);
+  background(100);
   let rows = [
     [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0],
     [0, 0, 0, 0, 1, 3, 3, 3, 3, 3, 3, 1, 4, 4, 4, 1],
@@ -28,10 +28,24 @@ function draw() {
 
   x = 0;
   y = 0;
-  for (let row of rows) {
-    for (let col of row) {
-      fill(colors[col])
-      if (col != 0) {
+  // for (let row of rows) {
+  //   for (let col of row) {
+
+  //     fill(colors[col])
+  //     if (col != 0) {
+  //       square(x + 50, y + 50, 25)
+  //     }
+  //     x += 25;
+  //   }
+  //   y += 25
+  //   x = 0;
+  // }
+
+  
+  for (let r = 0; r < rows.length; r++) {
+    for (let c = 0; c < rows[r].length; c++) {
+      fill(colors[rows[r][c]])
+      if (rows[r][c] != 0) {
         square(x + 50, y + 50, 25)
       }
       x += 25;
