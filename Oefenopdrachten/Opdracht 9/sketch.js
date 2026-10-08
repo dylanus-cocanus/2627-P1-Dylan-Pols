@@ -19,6 +19,6 @@ function draw() {
   background(150);
 for(i = 0; i < balls.length; i++) {
   balls[i]
-  circle(balls)
+  circle(ball)
 }
 }
