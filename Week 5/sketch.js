@@ -2,7 +2,7 @@ let questions = ["vraag1","vraag2","vraag3","vraag4","vraag5","vraag6","vraag7",
 let answers = [["1","2","3","4"],["1","2","3","4"],["1","2","3","4"],["1","2","3","4"],["1","2","3","4"],["1","2","3","4"],["1","2","3","4"],["1","2","3","4"],["1","2","3","4"],["1","2","3","4"]]
 let Qnumber = 0
 let correct = [0,1,3,2,1,3,2,0,3,1]
-
+let backgroundColor = ["grey", "green", "red"]
 
 
 function setup() {
@@ -13,9 +13,9 @@ function setup() {
 
 
 function draw() {
-  background(100);
+  background(backgroundColor[0]);
   if( Qnumber < questions.length){
-    text(questions[Qnumber],350,100)  
+    text(questions[Qnumber],350,100)
   }
 }
 
@@ -39,7 +39,7 @@ function ActualSetup(){
 function answerA() {
   if(correct[Qnumber] == 0)
   {
-    console.log("Correct")
+    backgroundColor[1]
   }
 
   Qnumber = Qnumber + 1
@@ -47,7 +47,7 @@ function answerA() {
 function answerB() {
     if(correct[Qnumber] == 1)
   {
-    console.log("Correct")
+    backgroundColor[1]
   }
 
   Qnumber = Qnumber + 1
@@ -55,7 +55,7 @@ function answerB() {
 function answerC() {
     if(correct[Qnumber] == 2)
   {
-    console.log("Correct")
+    backgroundColor[1]
   }
 
    Qnumber = Qnumber + 1
@@ -63,7 +63,7 @@ function answerC() {
 function answerD() {
     if(correct[Qnumber] == 3)
   {
-    console.log("Correct")
+    backgroundColor[1]
   }
 
    Qnumber = Qnumber + 1  
