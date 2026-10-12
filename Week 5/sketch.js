@@ -39,7 +39,7 @@ function ActualSetup(){
 function answerA() {
   if(correct[Qnumber] == 0)
   {
-    backgroundColor[1]
+    backgroundColor == backgroundColor[1]
   }
 
   Qnumber = Qnumber + 1
