@@ -39,7 +39,7 @@ function ActualSetup(){
 function answerA() {
   if(correct[Qnumber] == 0)
   {
-    backgroundColor == backgroundColor[1]
+    backgroundColor = backgroundColor[1]
   }
 
   Qnumber = Qnumber + 1
@@ -47,7 +47,7 @@ function answerA() {
 function answerB() {
     if(correct[Qnumber] == 1)
   {
-    backgroundColor[1]
+    backgroundColor = backgroundColor[1]
   }
 
   Qnumber = Qnumber + 1
@@ -55,7 +55,7 @@ function answerB() {
 function answerC() {
     if(correct[Qnumber] == 2)
   {
-    backgroundColor[1]
+    backgroundColor = backgroundColor[1]
   }
 
    Qnumber = Qnumber + 1
@@ -63,7 +63,7 @@ function answerC() {
 function answerD() {
     if(correct[Qnumber] == 3)
   {
-    backgroundColor[1]
+    backgroundColor = backgroundColor[1]
   }
 
    Qnumber = Qnumber + 1  
