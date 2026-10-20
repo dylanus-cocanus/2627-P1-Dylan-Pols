@@ -1,4 +1,4 @@
-let hunger = 10
+let hunger = 50
 let energy = 100
 let happyiness = 50
 let health = 100
@@ -21,4 +21,6 @@ function setup() {
 
 function draw() {
   background(150);
+  fill("red")
+  rect(400,400,100,100)
 }
