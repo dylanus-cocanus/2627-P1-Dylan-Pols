@@ -28,7 +28,6 @@ if(positieWereld >=6001 && positieWereld <= 8000){
   drawingContext.fillStyle = myGradient;
   drawingContext.strokeStyle = 'rgba(0, 0, 0, 0)';
 
-  // Draw the circle.
   circle(positieWereld +150, 100, 150);
   fill("white")
   circle(positieWereld + 3900, 100, 120)

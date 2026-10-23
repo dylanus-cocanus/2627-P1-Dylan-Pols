@@ -7,7 +7,7 @@ let health = 100
 
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(1000, 800);
   let Food = createButton("food")
   let Sleep = createButton("bed")
   let Activities = createButton("games")
@@ -22,5 +22,5 @@ function setup() {
 function draw() {
   background(150);
   fill("red")
-  rect(400,400,100,100)
+  rect(400,400,300,25,10)
 }

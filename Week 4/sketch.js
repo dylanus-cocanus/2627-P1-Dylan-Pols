@@ -1,4 +1,4 @@
-let shapes = [[/* xpos*/ 10,/* ypos*/10,/* width*/30,/* height*/30,/* color1*/ 150, /* color2*/ 150, /* color3*/ 150]]
+let shapes = [/* xpos*/ 10,/* ypos*/10,/* width*/30,/* height*/30,/* color1*/ 150, /* color2*/ 150, /* color3*/ 150]
 let pauze = false
 
 function setup() {

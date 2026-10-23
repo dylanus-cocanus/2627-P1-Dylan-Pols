@@ -1,5 +1,5 @@
 let colors = ["red", "green", "blue", "orange", "purple", "yellow"];
-let files = ["elephant", "giraffe", "hippo", "monkey", "panda", "parrot", "penguin", "pig", "rabbit", "snake"];
+// let files = ["elephant", "giraffe", "hippo", "monkey", "panda", "parrot", "penguin", "pig", "rabbit", "snake"];
 let functions =  [RED, GREEN, BLUE, ORANGE, PURPLE, YELLOW]
 let = currentC = "grey"
 
