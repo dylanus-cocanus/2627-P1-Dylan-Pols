@@ -1,4 +1,4 @@
-let hunger = 50
+let hunger = 100
 let energy = 100
 let happyiness = 50
 let health = 100
@@ -22,5 +22,10 @@ function setup() {
 function draw() {
   background(150);
   fill("red")
-  rect(400,400,300,25,10)
+  rect(50,35,150,15,10)
+  fill("orange")
+  rect(55,37,hunger,11,10)
+  fill(0)
+  textSize(15)
+  text("Hunger",60,47)
 }
