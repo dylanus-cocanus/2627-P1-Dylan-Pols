@@ -12,10 +12,10 @@ function setup() {
   let Sleep = createButton("bed")
   let Activities = createButton("games")
   let Health = createButton("medicine")
-  Food.position(400, 600);
-  Sleep.position(1000, 400);
-  Activities.position(550, 300);
-  Health.position(950, 700);
+  Food.position(100, 600);
+  Sleep.position(700, 400);
+  Activities.position(250, 300);
+  Health.position(650, 700);
 
 }
 
