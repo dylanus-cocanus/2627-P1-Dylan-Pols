@@ -1,7 +1,8 @@
-let hunger = 50
+let hunger = 100
 let energy = 100
-let happyiness = 50
-let health = 100
+let happiness = 90
+let health = 145
+let frames = 0
 
 
 
@@ -11,7 +12,7 @@ function setup() {
   let food = createButton("food")
   food.position(100, 600);
   food.mousePressed(() => {
-    if(hunger > 140) {hunger >= 140}
+    if(hunger > 141) {hunger >= 141}
   else hunger += 5})
 
   let sleep = createButton("bed")
@@ -28,6 +29,13 @@ function setup() {
 }
 
 function draw() {
+  frames += 1;
+  if(frames == 60) { //alles wat in deze if loop zit is elke seconde
+    frames = 0; // reset van frames
+    energy -= 0,5
+    hunger -= 1
+  }
+  //console.log(frames)
   background(150);
   fill("red")
   rect(50,14,150,20,10)
@@ -37,12 +45,11 @@ function draw() {
   textSize(15)
   text("Health",60,29)
 
-  fill("orange")
+  fill("red")
   rect(50,37,150,20,10)
-  fill("yellow")
+  fill("orange")
   rect(52,39,hunger,16,10)
   fill(0)
-  textSize(15)
   text("Hunger",60,52)
 
   fill("blue")
@@ -50,14 +57,12 @@ function draw() {
   fill("black")
   rect(52,62,energy,16,10)
   fill(255)
-  textSize(15)
   text("Energy",60,75)
 
+  fill("blue")
+  rect(50,83,150,20,10)
   fill("darkgreen")
-  rect(50,75,150,20,10)
-  fill("green")
-  rect(52,77,happiness,16,10)
+  rect(52,85,happiness,16,10)
   fill(0)
-  textSize(15)
-  text("Happiness",60,90)
+  text("Happiness",60,98)
 }
