@@ -11,9 +11,9 @@ function setup() {
   createCanvas(1000, 800);
   let food = createButton("food")
   food.position(100, 600);
-  food.mousePressed(() => {
+food.mousePressed(() => {
    hunger += 5
-  if(hunger > 141) {hunger = 141}
+  if(hunger > 141) {hunger = 141}})
 
 
   let sleep = createButton("bed")
@@ -71,5 +71,4 @@ function draw() {
   rect(52,85,happiness,16,10)
   fill(0)
   text("Happiness",60,98)
-}
-
+}}
