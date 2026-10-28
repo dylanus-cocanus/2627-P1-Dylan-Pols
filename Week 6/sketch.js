@@ -18,9 +18,8 @@ food.mousePressed(() => {
   let sleep = createButton("bed")
   sleep.position(700, 400);
   sleep.mousePressed(() => {sleeping = true})
-  sleep.mousePressed(() if(sleeping == true) {
-    sleeping = false
-  })
+  sleep.mousePressed(() if(sleeping == true) 
+  {sleeping = false})
 
   let activities = createButton("games")
   activities.position(250, 300);
