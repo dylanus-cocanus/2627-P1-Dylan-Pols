@@ -3,7 +3,7 @@ let energy = 100
 let happiness = 90
 let health = 145
 let frames = 0
-
+let sleeping = false
 
 
 
@@ -17,7 +17,10 @@ food.mousePressed(() => {
 
   let sleep = createButton("bed")
   sleep.position(700, 400);
-  
+  sleep.mousePressed(() => {sleeping = true})
+  sleep.mousePressed(() if(sleeping == true) {
+    sleeping = false
+  })
 
   let activities = createButton("games")
   activities.position(250, 300);
@@ -32,7 +35,7 @@ function draw() {
   if(frames == 60) { //alles wat in deze if loop zit is elke seconde
     frames = 0; // reset van frames
     hunger -= 0.7
-    energy -= 1
+    energy -= 10
   }
     if(hunger >= 130) {
     energy += 0,9
@@ -41,9 +44,10 @@ function draw() {
     energy -= 0.2
   }
   if(energy >= 141) {energy = 141}
-  if(hunger > 141) {hunger = 141}
+  if(hunger > 145) {hunger = 145}
     if(energy <= 0) {energy = 0}
   if(hunger <= 0) {hunger = 0}
+  if(sleeping == true) {energy += 1}
   //console.log(frames)
   background(150);
   fill("red")
