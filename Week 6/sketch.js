@@ -34,10 +34,10 @@ function draw() {
   if(frames == 60) { //alles wat in deze if loop zit is elke seconde
     frames = 0; // reset van frames
     hunger -= 0.7
-    energy -= 10
+    energy -= 1
   }
     if(hunger >= 130) {
-    energy += 0,9
+    energy += 0.9
   }
     if(hunger <= 30) {
     energy -= 0.2
