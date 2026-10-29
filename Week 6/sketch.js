@@ -8,16 +8,21 @@ let sleeping = false
 
 
 function setup() {
+
   createCanvas(1000, 800);
   let food = createButton("food")
   food.position(100, 600);
 food.mousePressed(() => {
    hunger += 5})
-
+ hunger = getItem("hunger")
 
   let sleep = createButton("bed")
   sleep.position(700, 400);
-  sleep.mousePressed(() => {sleeping = true})
+  sleep.mousePressed(() => {
+    sleeping = !sleeping
+  })
+  energy = getItem("energy")
+
 
   let activities = createButton("games")
   activities.position(250, 300);
@@ -29,23 +34,26 @@ food.mousePressed(() => {
 
 function draw() {
   frames += 1;
-  if(frames == 60) { //alles wat in deze if loop zit is elke seconde
+  if(frames == 12 0) { //alles wat in deze if loop zit is elke seconde
     frames = 0; // reset van frames
     hunger -= 0.7
     energy -= 1
+    storeItem("energy",energy)
+    storeItem("hunger",hunger)
   }
     if(hunger >= 130) {
-    energy += 0.9
+    energy += 0.02
   }
     if(hunger <= 30) {
-    energy -= 0.2
+    energy -= 0.05
   }
   if(energy >= 145) {energy = 145}
   if(hunger > 145) {hunger = 145}
     if(energy <= 0) {energy = 0}
   if(hunger <= 0) {hunger = 0}
-  if(sleeping == true) {energy += 1}
-  console.log("in bed",sleeping)
+  if(sleeping == true) {energy += 0.1}
+
+
   //console.log(frames)
   background(150);
   fill("red")
