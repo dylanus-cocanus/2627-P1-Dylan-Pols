@@ -18,8 +18,6 @@ food.mousePressed(() => {
   let sleep = createButton("bed")
   sleep.position(700, 400);
   sleep.mousePressed(() => {sleeping = true})
-  sleep.mousePressed(() if(sleeping == true) 
-  {sleeping = false})
 
   let activities = createButton("games")
   activities.position(250, 300);
@@ -42,11 +40,12 @@ function draw() {
     if(hunger <= 30) {
     energy -= 0.2
   }
-  if(energy >= 141) {energy = 141}
+  if(energy >= 145) {energy = 145}
   if(hunger > 145) {hunger = 145}
     if(energy <= 0) {energy = 0}
   if(hunger <= 0) {hunger = 0}
   if(sleeping == true) {energy += 1}
+  console.log("in bed",sleeping)
   //console.log(frames)
   background(150);
   fill("red")
