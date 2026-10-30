@@ -1,8 +1,7 @@
 let hunger = 50
 let energy = 100
 let happiness = 90
-let health = 145
-let healthPoints = 145
+let healthPoints = 100
 let frames = 0
 let sleeping = false
 let pressBed = 0
@@ -28,8 +27,8 @@ food.mousePressed(() => {
   sleep.position(850, 700);
   sleep.mousePressed(() => {
     sleeping = !sleeping
-    
-  })
+    })
+
   sleep.hide()
   energy = getItem("energy")
 
@@ -46,36 +45,42 @@ food.mousePressed(() => {
   health.position(650, 700);
   health.mousePressed(() => {
    healthPoints += 5})
- healthPoints = getItem("heatlh")
+ healthPoints = getItem("healthPoints")
 }
 
 function draw() {
   frames += 1;
-  if(frames == 120) { //alles wat in deze if loop zit is elke seconde
+  if(frames == 80) { //alles wat in deze if loop zit is elke seconde
     frames = 0; // reset van frames
     hunger -= 1 
     energy -= 3
-    storeItem("energy",energy)
-    storeItem("hunger",hunger)
-    storeItem("health",healthPoints)
-  }
+  
+    
     if(hunger >= 130) {
     energy += 0.01
   }
     if(hunger <= 30) {
     energy -= 0.05
-  }
-  if(hunger <= 0) {
-    healthPoints -= 5
+    }
+ if(hunger <= 0) {
+  healthPoints -= 10
+}
+
+    storeItem("healthPoints",healthPoints)
+    storeItem("energy",energy)
+    storeItem("hunger",hunger)
   }
 
   if(energy >= 145) {energy = 145}
   if(hunger > 145) {hunger = 145}
-  if(healthPoints > 145) {healthPoints = 145}
+  if(healthPoints >= 145) {healthPoints = 145}
   if(energy <= 0) {energy = 0}
   if(hunger <= 0) {hunger = 0}
   if(healthPoints <= 0) {healthPoints = 0}
   if(sleeping == true) {energy += 0.1}
+ 
+  
+ 
   
  console.log(pressBed)
 
