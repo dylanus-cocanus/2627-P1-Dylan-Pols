@@ -57,7 +57,7 @@ function draw() {
     energy -= 3
     storeItem("energy",energy)
     storeItem("hunger",hunger)
-    storeItem("health",health)
+    storeItem("health",healthPoints)
   }
     if(hunger >= 130) {
     energy += 0.01
@@ -71,7 +71,7 @@ function draw() {
 
   if(energy >= 145) {energy = 145}
   if(hunger > 145) {hunger = 145}
-  if(health > 145) {health = 145}
+  if(healthPoints > 145) {healthPoints = 145}
   if(energy <= 0) {energy = 0}
   if(hunger <= 0) {hunger = 0}
   if(healthPoints <= 0) {healthPoints = 0}
