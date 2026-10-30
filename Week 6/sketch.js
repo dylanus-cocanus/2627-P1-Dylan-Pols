@@ -7,8 +7,9 @@ let sleeping = false
 let pressBed = 0
 
 function preload() {
- Achtergrond = loadImage("assets/essentials/photos/Huiskamer.jpg")
- Slaapkamer = loadImage("assets/essentials/photos/sleeping.png")
+ Background = loadImage("assets/essentials/photos/Huiskamer.jpg")
+ Bedroom = loadImage("assets/essentials/photos/sleeping.png")
+ deadBoris = loadImage("assets/essentials/photos/dead-boris.png")
 }
 
 
@@ -46,11 +47,13 @@ food.mousePressed(() => {
   health.mousePressed(() => {
    healthPoints += 5})
  healthPoints = getItem("healthPoints")
+
+ console.log(deadBoris.width, deadBoris.height)
 }
 
 function draw() {
   frames += 1;
-  if(frames == 80) { //alles wat in deze if loop zit is elke seconde
+  if(frames == 10) { //alles wat in deze if loop zit is elke seconde
     frames = 0; // reset van frames
     hunger -= 1 
     energy -= 3
@@ -78,20 +81,20 @@ function draw() {
   if(hunger <= 0) {hunger = 0}
   if(healthPoints <= 0) {healthPoints = 0}
   if(sleeping == true) {energy += 0.1}
- 
+
   
- 
-  
- console.log(pressBed)
 
   //console.log(frames)
   if (pressBed == 0){
-  image(Achtergrond,0,0,1000,800)
-  }
-
+  image(Background,0,0,1000,800)
+  } 
   if (pressBed == 1){
-  image(Slaapkamer,0,0,1000,800)
+  image(Bedroom,0,0,1000,800)
  }
+  //   if(healthPoints == 0) {
+    
+  //}
+
   fill("black")
   rect(50,14,150,20,10)
   fill(204,153,51)
@@ -120,7 +123,7 @@ function draw() {
   rect(52,85,happiness,16,10)
   fill(0)
   text("Happiness",60,98)
- 
+image(deadBoris, 0, 0, 300, 600)
  
 }
 
